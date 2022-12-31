@@ -1,0 +1,26 @@
+.bar {
+  width: 70px;
+  height: 35px;
+  background-color: black;
+  border-radius: 100px;
+  padding: 2px;
+  border: 2px solid var(--primary-color);
+  /* align-self: center; */
+}
+
+.bar_state {
+  height: 28px;
+  width: 28px;
+  background-color: var(--primary-color);
+  border-radius: 100px;
+
+  transition: transform 500ms;
+}
+
+.bar_state_true {
+  transform: translateX(115%);
+}
+
+.bar_state_false {
+  transform: translateX(0);
+}

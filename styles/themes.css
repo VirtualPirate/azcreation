@@ -1,0 +1,18 @@
+:root {
+  --primary-color: #ff4444;
+  --nav-background: rgba(255, 68, 68, 0.3);
+  --side-nav-background: #4d1414;
+  --background-filter: none;
+  --background: url(../public/graphics/background-red.png);
+
+  --info-box-background-filter: hue-rotate(150deg);
+}
+
+.green-theme {
+  --primary-color: #60ff00;
+  --nav-background: rgba(68, 255, 87, 0.3);
+  --side-nav-background: #1c4d14;
+  --background-filter: hue-rotate(130deg);
+
+  --info-box-background-filter: hue-rotate(300deg);
+}

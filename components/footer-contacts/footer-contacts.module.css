@@ -1,0 +1,163 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background-color: #111;
+  margin-top: 10vw;
+
+  justify-content: space-around;
+}
+
+.footer_social_info {
+  padding: 4vw 8vw;
+}
+
+.footer_social_info h1 {
+  font-size: 4vw;
+  margin-bottom: 3vw;
+}
+
+.social_logo {
+  width: 3vw;
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+.social_logo_fill {
+  fill: var(--primary-color);
+}
+
+.social_info_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: fit-content;
+  margin-left: 5vw;
+}
+
+.social_info {
+  display: flex;
+  gap: 2vw;
+  align-items: center;
+  padding: 1vw 2vw;
+
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 1vw;
+  box-shadow: 0 0 5px var(--primary-color);
+}
+
+.social_info span {
+  font-size: 1.5vw;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.footer_contact_info {
+  padding: 4vw 8vw;
+  display: flex;
+  flex-direction: column;
+  gap: 2vw;
+}
+
+.contact_info {
+  display: flex;
+  gap: 2vw;
+  padding: 1vw 2vw;
+  border: 0.2vw solid var(--primary-color);
+  border-radius: 1vw;
+
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.contact_info_logo {
+  width: 6vw;
+  filter: drop-shadow(0 0 10px var(--primary-color));
+}
+
+.contact_logo_fill {
+  fill: var(--primary-color);
+}
+
+.contact_content {
+  display: flex;
+  gap: 1vw;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact_name {
+  font-size: 2vw;
+  font-weight: bold;
+  width: 100%;
+  color: var(--primary-color);
+
+  padding-bottom: 0.3vw;
+  border-bottom: 0.1vw solid white;
+}
+
+.contact_value {
+  font-size: 1.3vw;
+}
+
+@media (max-width: 800px) {
+  .footer_social_info h1 {
+    font-size: 6vw;
+  }
+  .social_logo {
+    width: 4vw;
+  }
+
+  .social_info span {
+    font-size: 2vw;
+  }
+
+  .contact_info_logo {
+    width: 7vw;
+  }
+
+  .contact_name {
+    font-size: 3vw;
+  }
+
+  .contact_value {
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer_social_info h1 {
+    font-size: 7vw;
+  }
+
+  .social_logo {
+    width: 6vw;
+  }
+
+  .social_info {
+    padding: 2vw 4vw;
+    gap: 4vw;
+  }
+
+  .social_info span {
+    font-size: 4vw;
+  }
+
+  .contact_info {
+    padding: 2vw 4vw;
+    gap: 4vw;
+  }
+
+  .contact_info_logo {
+    width: 12vw;
+  }
+
+  .contact_name {
+    font-size: 5vw;
+  }
+
+  .contact_value {
+    font-size: 3.5vw;
+  }
+}

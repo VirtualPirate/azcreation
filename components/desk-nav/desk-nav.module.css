@@ -1,0 +1,45 @@
+.desk_nav {
+  width: 100vw;
+  height: 8vw;
+  background: var(--nav-background);
+  transition-property: background-color;
+  transition-duration: 500ms;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+  padding: 0vw 3vw;
+}
+
+.right_content {
+  display: flex;
+  gap: 10vw;
+  align-items: center;
+  z-index: 1;
+}
+
+.nav_logo {
+  width: 4vw;
+}
+
+@media (max-width: 1400px) {
+  .desk_nav {
+    height: 10vw;
+  }
+
+  .nav_logo {
+    width: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .desk_nav {
+    height: 14vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav_logo {
+    visibility: hidden;
+  }
+}

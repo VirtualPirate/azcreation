@@ -1,0 +1,45 @@
+.sliced_rect {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 9vw;
+
+  background-color: black;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 10vw 100%);
+
+  animation-name: anim;
+  animation-duration: 750ms;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+
+@keyframes anim {
+  from {
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 10vw 100%);
+  }
+  to {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
+
+@media (max-width: 1400px) {
+  .sliced_rect {
+    height: 11vw;
+    width: 70vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  .sliced_rect {
+    height: 15vw;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .sliced_rect {
+    height: 15vw;
+    width: 85vw;
+  }
+}

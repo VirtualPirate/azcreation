@@ -1,0 +1,144 @@
+.intro_box {
+  margin-top: 5vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 40vw;
+  width: 40vw;
+  align-self: flex-start;
+
+  position: relative;
+}
+
+.box_stroke {
+  z-index: 1;
+  border: 3vw solid var(--primary-color);
+  box-shadow: 0 0 1vw 0.3vw var(--primary-color),
+    inset 0 0 1vw 0.3vw var(--primary-color);
+}
+
+.glow_box {
+  z-index: 0;
+
+  box-shadow: 0 0 2vw var(--primary-color),
+    inset 0 0 50vw 2vw var(--primary-color);
+}
+
+.box {
+  position: absolute;
+
+  top: 8vw;
+  left: 5vw;
+
+  height: 24vw;
+  width: 30vw;
+  border-radius: 2vw;
+  rotate: -35deg;
+
+  transition-property: border box-shadow;
+  transition-duration: 1s;
+  /* transition-delay: 500ms; */
+}
+
+.subject_up {
+  z-index: 2;
+}
+
+.subject_down {
+  z-index: 0;
+}
+
+@keyframes floatSubject {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes pop {
+  from {
+    scale: 0;
+  }
+  to {
+    scale: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.subject {
+  position: absolute;
+  top: 4vw;
+  left: 5vw;
+  width: 30vw;
+
+  animation: floatSubject 5s ease-in-out infinite;
+  /* animation: fadeIn 1s linear 0s 1 alternate forwards; */
+}
+
+@media (max-width: 800px) {
+  .intro_box {
+    width: 80vw;
+    height: 70vw;
+    justify-content: center;
+    /* height: 500px; */
+  }
+
+  .box {
+    /* width: 100vw; */
+    top: 11vw;
+    left: 17vw;
+    height: 50vw;
+    width: 60vw;
+    border-width: 6vw;
+    border-radius: 6vw;
+  }
+
+  .glow_box {
+    box-shadow: 0 0 7vw var(--primary-color),
+      inset 0 0 100vw 7vw var(--primary-color);
+  }
+
+  .box_stroke {
+    box-shadow: 0 0 1.5vw 0.7vw var(--primary-color),
+      inset 0 0 1.5vw 0.7vw var(--primary-color);
+  }
+
+  .subject {
+    top: 0;
+    width: 65vw;
+    left: 20%;
+  }
+}
+
+@media (max-width: 600px) {
+  .intro_box {
+    width: 100vw;
+    height: 90vw;
+  }
+  .box {
+    top: 15vw;
+    width: 70vw;
+    height: 60vw;
+    left: 12vw;
+    border-width: 8vw;
+  }
+
+  .subject {
+    width: 80vw;
+    left: 7%;
+  }
+}
