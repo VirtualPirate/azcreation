@@ -52,7 +52,7 @@ export default function SkillBox({
       delay: delay,
       easing: easing,
     });
-  }, []);
+  }, [delay]);
 
   return (
     <svg
