@@ -5,6 +5,7 @@
   border-radius: 100px;
   padding: 2px;
   border: 2px solid var(--primary-color);
+
   /* align-self: center; */
 }
 
@@ -23,4 +24,11 @@
 
 .bar_state_false {
   transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .bar {
+    position: absolute;
+    right: 5vw;
+  }
 }
