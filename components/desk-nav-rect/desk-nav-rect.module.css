@@ -9,7 +9,7 @@
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 10vw 100%);
 
   animation-name: anim;
-  animation-duration: 750ms;
+  animation-duration: 500ms;
   animation-iteration-count: 2;
   animation-direction: alternate;
 }
