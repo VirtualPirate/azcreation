@@ -61,6 +61,7 @@ export default function Gallery({ images }: GalleryProps) {
                     setImageIndex(index);
                     openModal();
                   }}
+                  key={index}
                 >
                   <img src={`./graphics/manipulation/${image}`} alt="" />
                 </div>

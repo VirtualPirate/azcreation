@@ -4,7 +4,7 @@ import { Inter } from "@next/font/google";
 import DeskNav from "../components/desk-nav/desk-nav.component";
 import IntroSection from "../components/intro-section/intro-section.component";
 import FooterContacts from "../components/footer-contacts/footer-contacts.component";
-
+import GalleryNavSection from "../components/gallery-nav-section/gallery-nav-section.component";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -18,6 +18,7 @@ export default function Home() {
       </Head>
       <DeskNav />
       <IntroSection />
+      <GalleryNavSection />
       <FooterContacts />
     </>
   );

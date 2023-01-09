@@ -1,0 +1,30 @@
+.skill_box {
+  width: 30vw;
+  height: 19.2vw;
+
+  transition-duration: 500ms;
+  transition-property: all;
+}
+
+.skill_box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 0;
+}
+
+@media (max-width: 1000px) {
+  .skill_box {
+    width: 40vw;
+    height: 29vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .skill_box {
+    width: 50vw;
+    height: 39vw;
+  }
+}
