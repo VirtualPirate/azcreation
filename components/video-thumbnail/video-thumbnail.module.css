@@ -1,0 +1,16 @@
+.frame {
+  width: 16vw;
+  height: 13vw;
+
+  /* border: 1px solid white; */
+  background-color: black;
+}
+
+.thumbnail_src {
+  /* height: 9vw; */
+  width: 100%;
+}
+
+.title {
+  padding: 10px;
+}

@@ -19,12 +19,9 @@
 
 .intro_heading {
   font-size: 2.5vw;
-  font-weight: 800;
   letter-spacing: 0.3rem;
   color: var(--primary-color);
-  text-shadow: 0 0 40px var(--primary-color), 0 0 80px var(--primary-color),
-    0 0 90px var(--primary-color);
-  transition-property: color;
+  text-shadow: 0 0 40px var(--primary-color);
   transition-duration: 100ms;
 }
 
@@ -33,6 +30,7 @@
   font-size: 1vw;
   width: 30vw;
   text-transform: uppercase;
+  /* font-family: PlayPretend; */
 }
 
 @media (max-width: 1200px) {

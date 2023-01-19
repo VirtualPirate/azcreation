@@ -12,7 +12,7 @@ export default function IntroSection() {
         <p className={styles.intro_text}>
           I am a self taught designer. Currently a Filmmaker as a career path.
           I&#39;ve designing experience of over 4 Years. I started at the early
-          age 16. Fascinated by Photography, Filemaking and Designing. Since,
+          age 16. Fascinated by Photography, Filmmaking and Designing. Since,
           then I have never stopped learning
         </p>
       </div>

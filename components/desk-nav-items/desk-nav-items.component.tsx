@@ -11,7 +11,7 @@ export default function DeskNavItems() {
         <span className={styles.nav_item}>SKILLS</span>
       </Link>
       <Link href="/gallery">
-        <span className={styles.nav_item}>GALLERY</span>
+        <span className={styles.nav_item}>ASSETS</span>
       </Link>
     </div>
   );

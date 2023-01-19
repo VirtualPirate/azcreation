@@ -41,6 +41,7 @@ export default function Gallery({ images }: GalleryProps) {
   return (
     <>
       <DeskNav />
+      <h1 className={styles.h1}> MANIPULATIONS </h1>
       <div>
         {modalIsOpen ? (
           <div className={styles.close_button} onClick={closeModal}>
