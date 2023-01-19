@@ -1,3 +1,4 @@
+import Head from "next/head";
 import VideosSection from "../../components/videos-section/videos-section.component";
 
 const drive_reels = [
@@ -7,5 +8,14 @@ const drive_reels = [
 ];
 
 export default function Reels() {
-  return <VideosSection title="REELS" videos={drive_reels} />;
+  return (
+    <>
+      <Head>
+        <title>Reels</title>
+        <meta name="description" content="Reels edited are here" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <VideosSection title="REELS" videos={drive_reels} />
+    </>
+  );
 }

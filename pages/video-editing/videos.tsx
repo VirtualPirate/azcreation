@@ -1,3 +1,5 @@
+import Head from "next/head";
+
 import VideosSection from "../../components/videos-section/videos-section.component";
 
 const drive_videos = [
@@ -9,5 +11,17 @@ const drive_videos = [
 ];
 
 export default function Videos() {
-  return <VideosSection title="VIDEOS" videos={drive_videos} />;
+  return (
+    <>
+      <Head>
+        <title>Videos</title>
+        <meta
+          name="description"
+          content="Videos edited by the owner is showed here"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
+      <VideosSection title="REELS" videos={drive_videos} />
+    </>
+  );
 }
