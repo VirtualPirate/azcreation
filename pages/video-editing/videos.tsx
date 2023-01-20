@@ -21,7 +21,7 @@ export default function Videos() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <VideosSection title="REELS" videos={drive_videos} />
+      <VideosSection title="VIDEOS" videos={drive_videos} />
     </>
   );
 }
