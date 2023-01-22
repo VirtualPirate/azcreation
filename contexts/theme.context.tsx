@@ -7,7 +7,7 @@ export type ThemeContextType = {
 };
 
 export const ThemeContext = createContext<ThemeContextType>({
-  theme: "green",
+  theme: "red",
   setTheme: (arg: ThemeType) => {},
 });
 
@@ -18,7 +18,7 @@ type ThemeContextProviderType = {
 export const ThemeContextProvider = ({
   children,
 }: ThemeContextProviderType) => {
-  const [theme, setTheme] = useState<ThemeType>("green");
+  const [theme, setTheme] = useState<ThemeType>("red");
   return (
     <ThemeContext.Provider value={{ theme, setTheme }}>
       {children}

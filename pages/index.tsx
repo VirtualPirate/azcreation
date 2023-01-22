@@ -18,6 +18,12 @@ export default function Home() {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="preload" as="image" href="/graphics/background-red.png" />
+        <link rel="preload" as="image" href="/graphics/red-subject-down.png" />
+        <link rel="preload" as="image" href="/graphics/red-subject-up.png" />
+        <link rel="preload" as="image" href="/graphics/strange-down.png" />
+        <link rel="preload" as="image" href="/graphics/strange-up.png" />
       </Head>
       <DeskNav />
       <IntroSection />

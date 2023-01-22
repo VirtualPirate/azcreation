@@ -22,7 +22,7 @@ export default function IntroSubject() {
   const [themeState, setThemeState] = useState<ThemeType>(theme);
   const introBoxRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
+  function popAnimation() {
     if (theme === themeState) return;
 
     anime({
@@ -43,7 +43,34 @@ export default function IntroSubject() {
         });
       },
     });
-  }, [theme]);
+  }
+
+  function fadeAnimation() {
+    if (theme === themeState) return;
+
+    anime({
+      targets: introBoxRef.current,
+      translateX: -100,
+      // scale: 0,
+      opacity: 0,
+      duration: 500,
+      easing: "cubicBezier(0, 0, 0.28, 1)",
+      complete: () => {
+        setThemeState(theme);
+        // introBoxRef!.current!.style!.transform = "translateX(100px)";
+        anime({
+          targets: introBoxRef.current,
+          translateX: 0,
+          opacity: 1,
+
+          duration: 500,
+          easing: "cubicBezier(0, 0, 0.28, 1)",
+        });
+      },
+    });
+  }
+
+  useEffect(fadeAnimation, [theme]);
 
   return (
     <div ref={introBoxRef} className={styles.intro_box}>
