@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./desk-nav.module.css";
 
 import ThemeToggleBar from "../theme-toggle-bar/theme-toggle-bar.compoent";
@@ -11,7 +13,9 @@ export default function DeskNav() {
     <nav className={styles.desk_nav}>
       <DeskNavRect />
       <SideNav />
-      <img className={styles.nav_logo} src="./graphics/logo.png" alt="" />
+      <Link href="/">
+        <img className={styles.nav_logo} src="./graphics/logo.png" alt="" />
+      </Link>
       <div className={styles.right_content}>
         <DeskNavItems />
         <ThemeToggleBar />
