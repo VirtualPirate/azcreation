@@ -2,8 +2,13 @@
   --container-bg-color: #333;
   --left-bg-color: rgba(255, 61, 61, 0.3);
   --left-button-hover-color: rgb(255, 61, 61);
+  --left-bg-image: url("../../public/graphics/reels.png") center center
+    no-repeat;
   --right-bg-color: rgba(31, 90, 255, 0.3);
   --right-button-hover-color: rgb(64, 161, 255);
+  --right-bg-image: url("../../public/graphics/videos.png") center center
+    no-repeat;
+
   --hover-width: 75%;
   --other-width: 25%;
   --speed: 1000ms;
@@ -63,7 +68,7 @@
 
 .split.left {
   left: 0;
-  background: url("../../public/graphics/reels.png") center center no-repeat;
+  background: var(--left-bg-image);
   background-size: cover;
 }
 
@@ -77,7 +82,7 @@
 
 .split.right {
   right: 0;
-  background: url("../../public/graphics/videos.png") center center no-repeat;
+  background: var(--right-bg-image);
   background-size: cover;
 }
 

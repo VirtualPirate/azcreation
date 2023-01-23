@@ -27,6 +27,10 @@ ul li {
   list-style-type: none;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-image: var(--background);
   background-repeat: no-repeat;
@@ -40,7 +44,7 @@ body {
   transition-duration: 500ms;
   backdrop-filter: var(--background-filter);
   position: relative;
-  width: 102%;
+  width: 100%;
   overflow-x: hidden;
   min-height: 100vh;
 }
