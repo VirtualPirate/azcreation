@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./footer-contacts.module.css";
 
 export default function FooterContacts() {
@@ -6,7 +8,10 @@ export default function FooterContacts() {
       <div className={styles.footer_social_info}>
         <h1>CONTACTS</h1>
         <div className={styles.social_info_wrapper}>
-          <a href="https://www.youtube.com/channel/UCZtSfFpNs2OjkCue1WNZu_g/videos">
+          <Link
+            href="https://www.youtube.com/channel/UCZtSfFpNs2OjkCue1WNZu_g/videos"
+            target="_blank"
+          >
             <div className={styles.social_info}>
               <svg
                 className={styles.social_logo}
@@ -26,8 +31,11 @@ export default function FooterContacts() {
               </svg>
               <span> YOUTUBE </span>
             </div>
-          </a>
-          <a href="https://www.linkedin.com/in/a-z-creation-5112871a3/">
+          </Link>
+          <Link
+            href="https://www.linkedin.com/in/a-z-creation-5112871a3/"
+            target="_blank"
+          >
             <div className={styles.social_info}>
               <svg
                 className={styles.social_logo}
@@ -50,8 +58,11 @@ export default function FooterContacts() {
               </svg>
               <span> LINKEDIN </span>
             </div>
-          </a>
-          <a href="https://www.instagram.com/a.z__creations/">
+          </Link>
+          <Link
+            href="https://www.instagram.com/a.z__creations/"
+            target="_blank"
+          >
             <div className={styles.social_info}>
               <svg
                 className={styles.social_logo}
@@ -76,7 +87,7 @@ export default function FooterContacts() {
               </svg>
               <span> INSTAGRAM </span>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
 
