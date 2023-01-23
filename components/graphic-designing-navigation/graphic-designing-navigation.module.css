@@ -1,0 +1,166 @@
+.css_variables {
+  --container-bg-color: #333;
+  --left-bg-color: rgba(255, 61, 61, 0.3);
+  --left-button-hover-color: rgb(255, 61, 61);
+  --left-bg-image: url("../../public/graphics/banners.png") center center
+    no-repeat;
+  --right-bg-color: rgba(31, 90, 255, 0.3);
+  --right-button-hover-color: rgb(64, 161, 255);
+  --right-bg-image: url("../../public/graphics/thumbnails.png") center center
+    no-repeat;
+
+  --hover-width: 75%;
+  --other-width: 25%;
+  --speed: 1000ms;
+}
+
+.h1 {
+  font-size: 4rem;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+.button {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  height: 4.5rem;
+  padding-top: 1.3rem;
+  width: 15rem;
+  text-align: center;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateX(-50%);
+}
+
+.split.left .button:hover {
+  background-color: var(--left-button-hover-color);
+  border-color: var(--left-button-hover-color);
+}
+
+.split.right .button:hover {
+  background-color: var(--right-button-hover-color);
+  border-color: var(--right-button-hover-color);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: var(--container-bg-color);
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+  background: var(--left-bg-image);
+  background-size: cover;
+}
+
+.split.left:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--left-bg-color);
+}
+
+.split.right {
+  right: 0;
+  background: var(--right-bg-image);
+  background-size: cover;
+}
+
+.split.right:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--right-bg-color);
+}
+
+.split.left,
+.split.right,
+.split.right:before,
+.split.left:before {
+  transition: var(--speed) all ease-in-out;
+}
+
+.hover_left .left {
+  width: var(--hover-width);
+}
+
+.hover_left .right {
+  width: var(--other-width);
+}
+
+.hover_left .right:before {
+  z-index: 2;
+}
+
+.hover_right .right {
+  width: var(--hover-width);
+}
+
+.hover_right .left {
+  width: var(--other-width);
+}
+
+.hover_right .left:before {
+  z-index: 2;
+}
+
+@media (max-width: 800px) {
+  .h1 {
+    font-size: 2rem;
+  }
+
+  .button {
+    width: 12rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .button {
+    top: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .split {
+    position: relative;
+    width: 100%;
+    height: 50%;
+  }
+
+  .hover_left .left {
+    width: 100%;
+  }
+
+  .hover_left .right {
+    width: 100%;
+  }
+
+  .hover_right .right {
+    width: 100%;
+  }
+
+  .hover_right .left {
+    width: 100%;
+  }
+}
