@@ -26,7 +26,10 @@ export default function SideNavItems() {
               <li>SKILLS</li>
             </Link>
             <Link href="/gallery" onClick={toggleNavState}>
-              <li>GALLERY</li>
+              <li>ASSETS</li>
+            </Link>
+            <Link href="/gallery" onClick={toggleNavState}>
+              <li>ABOUT</li>
             </Link>
           </ul>
         </div>
