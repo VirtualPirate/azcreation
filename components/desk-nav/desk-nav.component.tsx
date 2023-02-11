@@ -14,7 +14,7 @@ export default function DeskNav() {
       <DeskNavRect />
       <SideNav />
       <Link href="/">
-        <img className={styles.nav_logo} src="./graphics/logo.png" alt="" />
+        <img className={styles.nav_logo} src="/graphics/logo.png" alt="" />
       </Link>
       <div className={styles.right_content}>
         <DeskNavItems />

@@ -91,7 +91,7 @@ export default function Banners({ images }: GalleryProps) {
 
 export async function getStaticProps() {
   const images = fs.readdirSync("public/graphics/banners/");
-  const images_ = images.map((image) => `../graphics/banners/${image}`);
+  const images_ = images.map((image) => `/graphics/banners/${image}`);
 
   return { props: { images: images_ } };
 }

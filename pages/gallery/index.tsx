@@ -92,6 +92,6 @@ export default function Gallery({ images }: GalleryProps) {
 
 export async function getStaticProps() {
   const images = fs.readdirSync("public/graphics/manipulation/");
-  const images_ = images.map((image) => `./graphics/manipulation/${image}`);
+  const images_ = images.map((image) => `/graphics/manipulation/${image}`);
   return { props: { images: images_ } };
 }
