@@ -50,13 +50,13 @@ export default function Gallery({ images }: GalleryProps) {
       <DeskNav />
       <h1 className={styles.h1}> MANIPULATIONS </h1>
       <div>
-        {modalIsOpen ? (
+        {/* {modalIsOpen ? (
           <div className={styles.close_button} onClick={closeModal}>
             &#10006;
           </div>
         ) : (
           ""
-        )}
+        )} */}
 
         <section className={styles.gallery_section}>
           <div className={`${styles.photo_editing_gallery} ${styles.gallery}`}>
@@ -71,7 +71,7 @@ export default function Gallery({ images }: GalleryProps) {
                   }}
                   key={index}
                 >
-                  <img src={`./graphics/manipulation/${image}`} alt="" />
+                  <img src={image} alt="" />
                 </div>
               ))}
             </div>
@@ -92,6 +92,6 @@ export default function Gallery({ images }: GalleryProps) {
 
 export async function getStaticProps() {
   const images = fs.readdirSync("public/graphics/manipulation/");
-
-  return { props: { images } };
+  const images_ = images.map((image) => `./graphics/manipulation/${image}`);
+  return { props: { images: images_ } };
 }

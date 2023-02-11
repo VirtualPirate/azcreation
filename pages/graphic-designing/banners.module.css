@@ -6,7 +6,6 @@
 .close_button {
   position: sticky;
   top: 85vh;
-  /* bottom: 0; */
   right: 50%;
   transform: translate(50%);
   font-size: 20px;

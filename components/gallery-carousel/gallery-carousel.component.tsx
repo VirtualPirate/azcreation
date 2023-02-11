@@ -80,7 +80,7 @@ export default function GalleryCarousel({
             className={styles.slide}
             ref={(el) => (imagesRef.current[index] = el)}
           >
-            <img src={`./graphics/manipulation/${image}`} alt="Image" />
+            <img src={image} alt="Image" />
           </li>
         ))}
       </ul>
