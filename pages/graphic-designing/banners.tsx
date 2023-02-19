@@ -1,7 +1,9 @@
 import Head from "next/head";
 
 import GalleryCarousel from "../../components/gallery-carousel/gallery-carousel.component";
-import { useState, useRef, MouseEvent } from "react";
+import { GalleryDialogContext } from "../../contexts/gallery-dialog.context";
+import { useState, useRef, MouseEvent, useContext, useEffect } from "react";
+
 import DeskNav from "../../components/desk-nav/desk-nav.component";
 
 import styles from "./banners.module.css";
@@ -13,19 +15,32 @@ type GalleryProps = {
 };
 
 export default function Banners({ images }: GalleryProps) {
-  const [modalIsOpen, setIsOpen] = useState(false);
   const [imageIndex, setImageIndex] = useState(0);
+  const { modalState, setModalState } = useContext(GalleryDialogContext);
 
   const galleryDialog = useRef<HTMLDialogElement | null>(null);
 
+  useEffect(() => {
+    setModalState(false);
+  }, []);
+
+  useEffect(() => {
+    if (modalState && !galleryDialog.current?.open)
+      // if modal is open
+      galleryDialog.current?.showModal();
+    else {
+      galleryDialog.current?.close();
+    }
+  }, [modalState]);
+
   function openModal() {
-    setIsOpen(true);
-    galleryDialog.current?.showModal();
+    setModalState(true);
+    // galleryDialog.current?.showModal();
   }
 
   function closeModal() {
-    setIsOpen(false);
-    galleryDialog.current?.close();
+    setModalState(false);
+    // galleryDialog.current?.close();
   }
 
   function dialogClickEvent(event: MouseEvent<HTMLDialogElement>) {
