@@ -13,7 +13,7 @@ export default function SideNavItems() {
     <div className={styles.side_nav_items_wrapper}>
       <div className={styles.logo_card_wrapper}>
         <div className={`${styles.logo_card} ${navState ? styles.show : ""}`}>
-          <img src="./graphics/logo.png" className={styles.logo} alt="" />
+          <img src="/graphics/logo.png" className={styles.logo} alt="" />
         </div>
       </div>
       <div className={styles.items_card_wrapper}>
@@ -28,9 +28,9 @@ export default function SideNavItems() {
             <Link href="/gallery" onClick={toggleNavState}>
               <li>ASSETS</li>
             </Link>
-            <Link href="/gallery" onClick={toggleNavState}>
+            {/* <Link href="/gallery" onClick={toggleNavState}>
               <li>ABOUT</li>
-            </Link>
+            </Link> */}
           </ul>
         </div>
       </div>
