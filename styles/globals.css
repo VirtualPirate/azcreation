@@ -48,3 +48,9 @@ body {
   overflow-x: hidden;
   min-height: 100vh;
 }
+
+@media (max-width: 600px) {
+  html {
+    overflow-x: unset;
+  }
+}
